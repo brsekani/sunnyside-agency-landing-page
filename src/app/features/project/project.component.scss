@@ -1,0 +1,18 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 📱 Mobile: 2 images per row */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

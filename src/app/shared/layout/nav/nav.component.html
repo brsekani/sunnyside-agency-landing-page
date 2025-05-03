@@ -1,0 +1,21 @@
+<section class="hero-section" f>
+  <nav class="navbar" #menuRef>
+    <img src="/icons/logo.svg" alt="logo" />
+
+    <button class="hamburger" (click)="isOpen = !isOpen">
+      {{ isOpen ? "✕" : "☰" }}
+    </button>
+
+    <ul [class.open]="isOpen" class="nav-links">
+      <li><a routerLink="/">About</a></li>
+      <li><a routerLink="/about">Services</a></li>
+      <li><a routerLink="/services">Project</a></li>
+      <li><a routerLink="/contact" class="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1>We are creatives</h1>
+    <img src="/icons/icon-arrow-down.svg" alt="hero-icon" />
+  </div>
+</section>

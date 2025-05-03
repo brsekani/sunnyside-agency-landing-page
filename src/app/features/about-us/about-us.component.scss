@@ -1,0 +1,212 @@
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+}
+
+.firstDiv {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.secondDiv {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.whiteBgText {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.whiteBgText div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 60%;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.whiteBgText h1 {
+  font-size: 36px;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.whiteBgText p {
+  color: hsl(232, 10%, 55%);
+}
+
+.whiteBgText a {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.whiteBgText a {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.whiteBgText a::after {
+  content: "";
+  position: absolute;
+  bottom: 1px; /* adjust to move upward into text */
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: #fdf2b8;
+  border-radius: 10px;
+  z-index: -1; /* puts the yellow behind the text */
+}
+
+.secondDiv .whiteBgText a {
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", serif;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.secondDiv .whiteBgText a::after {
+  content: "";
+  position: absolute;
+  bottom: 1px; /* adjust to move upward into text */
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: #f8d5cf;
+  border-radius: 10px;
+  z-index: -1; /* puts the yellow behind the text */
+}
+
+.whiteBgImage {
+  height: 100%;
+  width: 50%;
+}
+
+.whiteBgImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.image-content-one {
+  width: 50%;
+  height: 100%;
+  background-image: url("/images/image-graphic-design-desktop.jpg");
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* push content to bottom */
+  justify-content: center;
+  color: white;
+}
+
+.image-content-two {
+  width: 50%;
+  height: 100%;
+  background-image: url("/images/image-photography-desktop.jpg");
+  //   background-size: cover;
+  //   background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* push content to bottom */
+  justify-content: center;
+  color: white;
+}
+
+.image-text {
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+  max-width: 50%;
+}
+
+.image-content-one .image-text h1 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-family: "Fraunces", serif;
+  color: hsl(167, 40%, 24%);
+}
+
+.image-content-two .image-text h1 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-family: "Fraunces", serif;
+  color: hsl(198, 62%, 26%);
+}
+
+.image-text p {
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(168, 34%, 41%);
+}
+
+@media (max-width: 768px) {
+  .firstDiv {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .secondDiv {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .whiteBgText {
+    width: 100%;
+  }
+
+  .whiteBgImage {
+    width: 100%;
+  }
+
+  .whiteBgText div {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .whiteBgText h1 {
+    font-size: 30px;
+  }
+
+  .image-content-one {
+    background-image: url("/images/image-graphic-design.jpg");
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    padding: 500px 0px 0px 0px;
+  }
+
+  .image-content-two {
+    background-image: url("/images/image-photography.jpg");
+    background-size: cover;
+    height: fit-content;
+    width: 100%;
+    padding: 500px 0px 0px 0px;
+  }
+}
